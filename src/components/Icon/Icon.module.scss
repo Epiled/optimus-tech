@@ -41,4 +41,10 @@
   &[data-color="neutral"] {
     color: $color-status-neutral-foreground;
   }
+
+  &[data-action="true"] {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

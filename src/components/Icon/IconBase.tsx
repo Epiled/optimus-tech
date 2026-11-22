@@ -8,10 +8,12 @@ export default function IconBase({
   label,
   className,
   strokeWidth = 2,
+  onClick,
 }: IconBaseProps) {
   return (
     <svg
       data-color={color}
+      data-action={Boolean(onClick)}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -25,6 +27,7 @@ export default function IconBase({
       role={label ? "img" : undefined}
       aria-label={label}
       focusable="false"
+      onClick={onClick}
     >
       {children}
     </svg>
