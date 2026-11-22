@@ -1,17 +1,24 @@
 import Imagicon from "../Imagicon";
+import Typography from "../Typography";
 import styles from "./Card.module.scss";
 
 import type { CardProps } from "./Card.types";
 
-export default function Card({ imagicon, value, title, text }: CardProps) {
+export default function Card({
+  variant = "default",
+  imagicon,
+  value,
+  title,
+  text,
+}: CardProps) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-variant={variant}>
       <Imagicon {...imagicon} />
 
       <div className={styles.card__content}>
-        <span className={styles.card__value}>{value}</span>
-        <h3 className={styles.card__title}>{title}</h3>
-        <p className={styles.card__text}>{text}</p>
+        {value && <span className={styles.card__value}>{value}</span>}
+        <Typography {...title} />
+        <Typography {...text} />
       </div>
     </div>
   );
