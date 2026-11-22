@@ -64,12 +64,15 @@ Performance and web application capabilities will be evaluated using Lighthouse 
 
 The following table will be updated after running a Lighthouse audit on the production deployment.
 
-| Metric         | Score | Status        |
-| -------------- | ----: | ------------- |
-| Performance    |     — | Pending audit |
-| Accessibility  |     — | Pending audit |
-| Best Practices |     — | Pending audit |
-| SEO            |     — | Pending audit |
+| Metric           | Score Desktop | Status | Score Mobile | Status |
+| ---------------- | ------------: | ------ | -----------: | ------ |
+| Performance      |           100 | Good   |           98 | Good   |
+| Accessibility    |           100 | Good   |          100 | Good   |
+| Best Practices   |            96 | Good   |           96 | Good   |
+| SEO              |            91 | Good   |           91 | Good   |
+| Agentic Browsing |           2/2 | Passed |          2/2 | Passed |
+
+> Audit results refer to the Home page and may vary across other application routes.
 
 ### PWA Checklist
 
