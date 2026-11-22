@@ -3,11 +3,11 @@ import Menu from "@/components/Menu";
 import Wrap from "@/components/Wrap";
 import Section from "@/components/Section";
 import Form from "@/components/Form";
-import "@/styles/Theme.module.scss";
+import styles from "@/styles/Theme.module.scss";
 
 export default function PublicLayout() {
   return (
-    <>
+    <div className={styles.theme}>
       <Wrap>
         <Menu />
         <main>
@@ -22,6 +22,6 @@ export default function PublicLayout() {
       >
         <Form />
       </Section>
-    </>
+    </div>
   );
 }

@@ -14,7 +14,7 @@ const AuthLayout = () => {
   const isLogin = pathname === "/login";
 
   return (
-    <div className={styles.authLayout}>
+    <div className={`${styles.theme} ${styles.authLayout}`}>
       <Wrap>
         <Menu />
       </Wrap>
