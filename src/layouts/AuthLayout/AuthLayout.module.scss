@@ -1,0 +1,61 @@
+@use "@/styles/variables" as *;
+@use "@/styles/breakpoints" as *;
+
+.authLayout {
+  min-height: 100vh;
+
+  &__main {
+    background-color: #f8f8fa;
+    height: 100dvh;
+  }
+
+  &__panel {
+    width: 100%;
+    max-width: 110rem;
+    min-height: 52rem;
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      border-radius: 1.6rem;
+      padding-top: 3.2rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      max-width: 120rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 3.2rem;
+    position: relative;
+    top: -1.6rem;
+    background-color: $color-neutral-white;
+
+    @media (min-width: $mobile) {
+      padding: 4rem;
+      top: 0;
+      border-radius: 0 1.6rem 1.6rem 0;
+      border-top: 0.1rem solid $color-neutral-gray;
+      border-right: 0.1rem solid $color-neutral-gray;
+      border-bottom: 0.1rem solid $color-neutral-gray;
+    }
+
+    @media (min-width: $tablet) {
+      padding: 4rem 8rem;
+    }
+  }
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

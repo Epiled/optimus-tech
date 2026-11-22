@@ -1,0 +1,46 @@
+@use "@/styles/variables" as *;
+@use "@/styles/breakpoints" as *;
+
+.authBenefits {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 8rem 3.2rem 7.2rem 3.2rem;
+  flex: 1;
+  background: #fcf9fa;
+  background: linear-gradient(
+    60deg,
+    rgba(252, 249, 250, 1) 0%,
+    rgba(250, 246, 247, 1) 50%,
+    rgba(251, 246, 247, 1) 100%
+  );
+
+  @media screen and (min-width: 768px) {
+    border-radius: 1.6rem 0 0 1.6rem;
+    padding: 4rem;
+    border-top: 0.1rem solid $color-neutral-gray;
+    border-left: 0.1rem solid $color-neutral-gray;
+    border-bottom: 0.1rem solid $color-neutral-gray;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 8rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__cards {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      max-width: 33rem;
+    }
+  }
+}

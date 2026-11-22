@@ -1,0 +1,69 @@
+@use "@/styles/variables" as *;
+@use "@/styles/breakpoints" as *;
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex: 1;
+  border-radius: 1.6rem 1.6rem 0 0;
+  background: $color-surface-base;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  &__check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.6rem;
+  }
+
+  &__divide {
+    font-family: inherit;
+    color: inherit;
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.4em;
+
+    position: relative;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: calc(50% - 2.4rem);
+      height: 0.1rem;
+      background: $color-text-accessibility;
+      transform: translateY(50%);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+}
