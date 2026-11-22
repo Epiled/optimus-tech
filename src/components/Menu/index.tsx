@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import classNames from "classnames";
 import styles from "./Menu.module.scss";
 import Button from "@/components/Button";
 import Toggle from "./Toggle";
 import Logo from "@/assets/svg/logo.svg?react";
-import { useNavigate } from "react-router";
 
 export default function Menu() {
   const navigate = useNavigate();

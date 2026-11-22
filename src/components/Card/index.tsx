@@ -17,8 +17,8 @@ export default function Card({
 
       <div className={styles.card__content}>
         {value && <span className={styles.card__value}>{value}</span>}
-        <Typography {...title} />
-        <Typography {...text} />
+        <Typography as="h2" {...title} />
+        <Typography as="p" {...text} />
       </div>
     </div>
   );

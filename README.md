@@ -84,6 +84,38 @@ The following table tracks the validation of Progressive Web App capabilities.
 
 > **Note:** Performance scores and PWA capabilities will only be marked as implemented or evaluated after validation.
 
+## 🧪 Testing
+
+The project uses [Vitest](https://vitest.dev/) with jsdom and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for automated component testing.
+
+The test suite covers:
+
+- UI component rendering and behavior
+- Form components and user interactions
+- Input components and controls
+- Navigation and menu interactions
+- Home page rendering
+
+### Running Tests
+
+Run the test suite once:
+
+```bash
+npm run test -- --run
+```
+
+Start the test environment in watch mode:
+
+```bash
+npm run test
+```
+
+Generate a test coverage report:
+
+```bash
+npm run test:coverage
+```
+
 ## 🚀 Demo
 
 Access the live application below to interact with the interface and run your own performance tests

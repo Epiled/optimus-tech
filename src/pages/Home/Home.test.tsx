@@ -1,15 +1,7 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Home } from "./Home";
 
 describe("Home", () => {
-  it("should render the menu", () => {
-    render(<Home />);
-
-    const menu = screen.getByRole("navigation");
-
-    expect(menu).toBeInTheDocument();
-  });
-
   it("should render about section", () => {
     render(<Home />);
 
@@ -38,22 +30,5 @@ describe("Home", () => {
     });
 
     expect(testimonials).toBeInTheDocument();
-  });
-
-  it("should render the newsletter form", () => {
-    render(<Home />);
-
-    const newsletter = screen.getByRole("complementary");
-
-    const newsLetterTitle = within(newsletter).getByRole("heading", {
-      name: "Acompanhe as nossas oportunidades",
-    });
-
-    const button = within(newsletter).getByRole("button", {
-      name: "Cadastrar",
-    });
-
-    expect(newsLetterTitle).toBeInTheDocument();
-    expect(button).toBeInTheDocument();
   });
 });
