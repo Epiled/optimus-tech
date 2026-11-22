@@ -22,4 +22,8 @@
     color: $color-brand;
     border-bottom: 0.2rem solid $color-brand;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }

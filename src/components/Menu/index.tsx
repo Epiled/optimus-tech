@@ -4,10 +4,12 @@ import styles from "./Menu.module.scss";
 import Button from "@/components/Button";
 import Toggle from "./Toggle";
 import Logo from "@/assets/svg/logo.svg?react";
+import { useNavigate } from "react-router";
 
 export default function Menu() {
-  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className={styles.menu}>
       <div
@@ -33,7 +35,7 @@ export default function Menu() {
             styles["menu__container--links"],
           )}
         >
-          <a className={styles.menu__link} href="#">
+          <a className={styles.menu__link} href="/">
             Home
           </a>
           <a className={styles.menu__link} href="#">
@@ -48,10 +50,13 @@ export default function Menu() {
         </div>
 
         <div className={styles.menu__container}>
-          <a className={styles.menu__link} href="#">
-            Entrar
-          </a>
-          <Button>Cadastrar</Button>
+          <Button
+            text="Entrar"
+            variant="secondary"
+            onClick={() => navigate("/login")}
+          />
+
+          <Button text="Cadastrar" onClick={() => navigate("/cadastro")} />
         </div>
       </div>
     </nav>

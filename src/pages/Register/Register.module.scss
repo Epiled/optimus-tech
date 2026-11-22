@@ -1,0 +1,24 @@
+@use "@/styles/variables" as *;
+@use "@/styles/breakpoints" as *;
+
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex: 1;
+  border-radius: 1.6rem 1.6rem 0 0;
+  background: $color-surface-base;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  &__check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.6rem;
+  }
+}

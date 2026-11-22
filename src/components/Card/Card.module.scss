@@ -6,11 +6,17 @@
   align-items: flex-start;
   gap: 1.2rem;
 
-  background: $color-neutral-white;
-  border: 0.1rem solid $color-neutral-gray;
   border-radius: 0.8rem;
 
-  padding: 1.2rem;
+  &[data-variant="default"] {
+    background: $color-neutral-white;
+    border: 0.1rem solid $color-neutral-gray;
+    padding: 1.2rem;
+  }
+
+  &[data-variant="alternative"] {
+    background: transparent;
+  }
 
   &__content {
     display: flex;

@@ -19,6 +19,7 @@ export interface IconProps {
   label?: string;
   className?: string;
   strokeWidth?: number;
+  onClick?: () => void;
 }
 
 export interface IconBaseProps extends IconProps {

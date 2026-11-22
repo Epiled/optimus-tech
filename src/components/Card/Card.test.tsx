@@ -8,8 +8,8 @@ describe("Card", () => {
       <Card
         imagicon={{ shape: "circle", type: "brand" }}
         value={0}
-        title={"Candidaturas"}
-        text={"Total de candidaturas"}
+        title={{ text: "Candidaturas" }}
+        text={{ text: "Total de candidaturas" }}
       />,
     );
 
@@ -27,8 +27,8 @@ describe("Card", () => {
       <Card
         imagicon={{ shape: "circle", type: "brand" }}
         value={5}
-        title="Vagas disponíveis"
-        text="Total de vagas abertas"
+        title={{ text: "Vagas disponíveis" }}
+        text={{ text: "Total de vagas abertas" }}
       />,
     );
 
@@ -49,8 +49,8 @@ describe("Card", () => {
           type: "success",
         }}
         value={5}
-        title="Candidaturas"
-        text="Total de candidaturas"
+        title={{ text: "Candidaturas" }}
+        text={{ text: "Total de candidaturas" }}
       />,
     );
 
@@ -74,8 +74,8 @@ describe("Card", () => {
           },
         }}
         value={5}
-        title="Candidaturas"
-        text="Total de candidaturas"
+        title={{ text: "Candidaturas" }}
+        text={{ text: "Total de candidaturas" }}
       />,
     );
 
